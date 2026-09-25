@@ -29,7 +29,7 @@ Every module follows the same pattern as the provided demo: `*.interface.ts`, `*
 
 ```bash
 npm install
-cp .env      # set DATABASE_URL and the JWT secrets
+cd .env      # set DATABASE_URL and the JWT secrets
 npm run dev               # http://localhost:5000
 ```
 
