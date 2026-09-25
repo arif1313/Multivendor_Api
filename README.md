@@ -20,31 +20,7 @@ three roles: **admin**, **vendor**, **customer**.
 
 ## Project structure
 
-```
-src/
-  server.ts                 # db connection + http server
-  app.ts                    # express app, middlewares, routes
-  seed.ts                   # admin + 2 vendors + sample products
-  uploads.ts                # multer local /uploads storage
-  config/
-  app/
-    middlewares/            # auth, validateRequest, guestSession, error handlers
-    utils/                  # AppError, catchAsync, sendResponse, pricing, pagination, slug
-    routes/                 # route registry + vendor dashboard routes
-    modules/
-      User/                 # interface, model, validation, service, controller, router
-      Vendor/
-      Category/
-      Product/
-      Cart/
-      Order/
-      Review/
-      Subscription/
-      Admin/
-scripts/smoke.ts            # end-to-end API smoke test on an in-memory MongoDB
-docs/API.md                 # endpoint reference
-docs/postman_collection.json
-```
+
 
 Every module follows the same pattern as the provided demo: `*.interface.ts`, `*.model.ts`,
 `*.validation.ts` (Joi), `*.service.ts`, `*.controller.ts`, `*.router.ts`.
@@ -54,7 +30,6 @@ Every module follows the same pattern as the provided demo: `*.interface.ts`, `*
 ```bash
 npm install
 cp .env      # set DATABASE_URL and the JWT secrets
-npm run seed              # optional demo data
 npm run dev               # http://localhost:5000
 ```
 
